@@ -2,7 +2,7 @@ name: Run Selenium Script
 
 on:
   schedule:
-    - cron: '19 20 * * *'
+    - cron: '23 11 * * *'
   workflow_dispatch:
 
 jobs:
