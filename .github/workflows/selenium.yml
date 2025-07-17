@@ -25,7 +25,7 @@ jobs:
 
     - name: Run Selenium script
       env:
-        MY_ID: ${{ secrets.MY_ID }}
-        MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+        GGPOINT_ID: ${{ secrets.GGPOINT_ID }}
+        GGPOINT_PASSWORD: ${{ secrets.GGPOINT_PASSWORD }}
       run: |
         python script.py
