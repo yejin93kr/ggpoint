@@ -33,6 +33,7 @@ def main():
 
         print("Finding and clicking the button...")
         btn = driver.find_element(By.XPATH, '//button[span[text()="출석하기"]]')
+        print(btn.get_attribute('class'))
         btn.click()
         print("Button clicked successfully.")
 
