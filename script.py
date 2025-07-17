@@ -36,6 +36,9 @@ def main():
         btn.click()
         print("Button clicked successfully.")
 
+    except Exception as e:
+        print("An error occurred:", e)
+
     finally:
         driver.quit()
 
