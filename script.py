@@ -35,6 +35,7 @@ def main():
         btn = driver.find_element(By.XPATH, '//button[span[text()="출석하기"]]')
         print(btn.get_attribute('class'))
         btn.click()
+        time.sleep(5)
         print("Button clicked successfully.")
 
     except Exception as e:
