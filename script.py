@@ -21,22 +21,17 @@ def main():
         idInput = driver.find_element(By.XPATH, "//input[@placeholder='아이디']")
         pwInput = driver.find_element(By.XPATH, "//input[@placeholder='비밀번호']")
 
-        print("Entering credentials...")
         idInput.send_keys(os.getenv('GGPOINT_ID'))
         pwInput.send_keys(os.getenv('GGPOINT_PASSWORD'))
         pwInput.send_keys(Keys.RETURN)
         time.sleep(5)
 
-        print("Navigating to challenge page...")
         driver.get('https://ggpoint.kdot.cloud/bookpoint/challenge/challenge')
         time.sleep(5)
 
-        print("Finding and clicking the button...")
         btn = driver.find_element(By.XPATH, '//button[span[text()="출석하기"]]')
-        print(btn.get_attribute('class'))
         btn.click()
         time.sleep(5)
-        print("Button clicked successfully.")
 
     except Exception as e:
         print("An error occurred:", e)
