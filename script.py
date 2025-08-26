@@ -15,7 +15,7 @@ def main():
     driver.implicitly_wait(2)
 
     try:
-        driver.get('https://gghome.librarygo.kr/ggl/merge-user/login?target=ggpoint')
+        driver.get('https://www.library.kr/ggl/merge-user/login?target=ggpoint')
         time.sleep(5)
 
         idInput = driver.find_element(By.XPATH, "//input[@placeholder='아이디']")
@@ -26,7 +26,7 @@ def main():
         pwInput.send_keys(Keys.RETURN)
         time.sleep(5)
 
-        driver.get('https://ggpoint.kdot.cloud/bookpoint/challenge/challenge')
+        driver.get('https://www.library.kr/bookpoint/challenge/challenge')
         time.sleep(5)
 
         btn = driver.find_element(By.XPATH, '//button[span[text()="출석하기"]]')
