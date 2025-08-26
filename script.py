@@ -28,7 +28,7 @@ def main():
     chrome_options.add_argument('--disable-dev-shm-usage')
 
     driver = webdriver.Chrome(chrome_options)
-    driver.implicitly_wait(2)
+    wait = WebDriverWait(driver, 15)
 
     try:
         driver.get(LOGIN_URL)
